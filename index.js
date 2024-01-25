@@ -1,6 +1,9 @@
-// Set up constant exchange rates
+/**
+ * SET YOUR VARIABLES
+ */
+
 const EXCHANGE_RATES = {
-  USD: 1.27, // 1 USD = 1.27 CAD
+  USD: 1.35, // 1 USD = 1.27 CAD
   CAD: 1, // 1 CAD = 1 CAD
 };
 
@@ -24,6 +27,10 @@ let desiredAllocations = {
   GOOG: 0.4,
   CASH: 0.2,
 };
+
+/**
+ * END
+ */
 
 function rebalancePortfolio(portfolio, cash, desiredAllocations) {
   portfolio["CASH"] = {
