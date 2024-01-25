@@ -32,6 +32,20 @@ let desiredAllocations = {
  * END
  */
 
+// Calculate the sum of values
+let sum = Object.values(desiredAllocations).reduce((acc, value) => acc + value, 0);
+
+// Check if the sum is above, below, or equal to 100
+if (sum > 1) {
+  console.log(`Your portfolio allocation is above 100%: ${sum}`);
+} else if (sum < 1) {
+  console.log(`Your portfolio allocation is below 100%: ${sum}`);
+} else {
+  console.log(`Your portfolio allocation is equal to 100%: ${sum}`);
+}
+
+console.log(`\n`);
+
 function rebalancePortfolio(portfolio, cash, desiredAllocations) {
   portfolio["CASH"] = {
     shares: cash,
